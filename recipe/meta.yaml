@@ -1,5 +1,5 @@
 {% set name = "qpdf" %}
-{% set version = "8.2.1" %}
+{% set version = "8.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,28 @@ package:
 
 source:
   url: https://github.com/qpdf/qpdf/archive/release-qpdf-{{version}}.tar.gz
-  sha256: f61319dbb44ca45f3a200bd59e8a86a906b61e2d223b104d9d2fbddcab9100ab
+  sha256: 71d9b6c77ac56521d86a481cb9e52c0774de106c1dcf7a0644a05bd1230be87e
 
 build:
-  number: 1000
-  skip: True  # [win]
+  number: 0
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - automake
-    - autoconf
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('cxx') }}        # [unix]
+    - {{ compiler('m2w64_cxx') }}  # [win]
+    - m2-autoconf  # [win]
+    - m2-automake1.15  # [win]
+    - automake  # [not win]
+    - autoconf  # [not win]
+    - m2-sed  # [win]
+    - vs2015_win-64  # [win]
   host:
     - zlib
     - jpeg
+    # this is because sha256sum is missing on osx:
+    - coreutils  # [osx]
   run:
     - zlib
     - jpeg
@@ -46,3 +53,4 @@ about:
 extra:
   recipe-maintainers:
     - jenzopr
+    - carlodri

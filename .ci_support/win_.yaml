@@ -1,0 +1,17 @@
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+jpeg:
+- '9'
+m2w64_c_compiler:
+- m2w64-toolchain
+m2w64_cxx_compiler:
+- m2w64-toolchain
+pin_run_as_build:
+  jpeg:
+    max_pin: x
+  zlib:
+    max_pin: x.x
+zlib:
+- '1.2'
