@@ -27,6 +27,7 @@ requirements:
     - m2-grep  # [win]
     - vs2015_win-64  # [win]
   host:
+    - m2-sed  # [win]
     - zlib
     - jpeg
     # this is because sha256sum is missing on osx:

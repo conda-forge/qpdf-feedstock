@@ -2,7 +2,6 @@ copy "%RECIPE_DIR%\bld-win.sh" .
 
 set MSYSTEM=MINGW%ARCH%
 set MSYS2_PATH_TYPE=inherit
-set CHERE_INVOKING=1
 
 FOR /F "delims=" %%i IN ('cygpath.exe -u -p "%PATH%"') DO set "PATH_OVERRIDE=%%i"
 FOR /F "delims=" %%i IN ('cygpath.exe -m "%BUILD_PREFIX%"') DO set "BUILD_PREFIX_M=%%i"
