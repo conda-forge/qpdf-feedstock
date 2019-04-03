@@ -23,12 +23,14 @@ requirements:
     - automake  # [not win]
     - autoconf  # [not win]
     - m2-sed  # [win]
+    - m2-grep  # [win]
     - vs2015_win-64  # [win]
   host:
     - zlib
     - jpeg
     # this is because sha256sum is missing on osx:
     - coreutils  # [osx]
+    - m2w64-binutils  # [win]
   run:
     - zlib
     - jpeg
