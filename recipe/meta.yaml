@@ -1,5 +1,5 @@
 {% set name = "qpdf" %}
-{% set version = "8.2.1" %}
+{% set version = "9.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/qpdf/qpdf/archive/release-qpdf-{{version}}.tar.gz
-  sha256: f61319dbb44ca45f3a200bd59e8a86a906b61e2d223b104d9d2fbddcab9100ab
+  sha256: c5f859cf7f344e6a2415e02524acb19cdabbbdb634d1c3bf68d2fc26ae561a82
 
 build:
-  number: 1001
+  number: 0
   skip: True  # [win]
 
 requirements:
