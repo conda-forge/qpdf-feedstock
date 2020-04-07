@@ -1,17 +1,17 @@
 {% set name = "qpdf" %}
-{% set version = "9.1.1" %}
+{% set version = "10.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/qpdf/qpdf/archive/release-qpdf-{{version}}.tar.gz
-  sha256: c5f859cf7f344e6a2415e02524acb19cdabbbdb634d1c3bf68d2fc26ae561a82
+  url: https://github.com/qpdf/qpdf/archive/release-qpdf-{{ version }}.tar.gz
+  sha256: d9b039421c78ddd2691242546a835a904e46027c1e64a274b53a515d01850d86
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
@@ -36,7 +36,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
-  summary: 'Command-line program that does structural, content-preserving transformations on PDF files'
+  summary: Command-line program that does structural, content-preserving transformations on PDF files
   description: |
     With QPDF, it is possible to copy objects from one PDF file into another and to manipulate the list of pages in a PDF file.
     This makes it possible to merge and split PDF files. The QPDF library also makes it possible for you to create PDF files from scratch.
