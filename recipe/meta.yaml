@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/qpdf/qpdf/archive/release-qpdf-{{ version }}.tar.gz
+  url: https://github.com/qpdf/qpdf/releases/download/v{{ version }}/qpdf-{{ version }}.tar.gz
   sha256: 785edab622a1bc7e25e1537ad2c325005d48c5c7957f7abedff405deb80fa59a
 
 build:
