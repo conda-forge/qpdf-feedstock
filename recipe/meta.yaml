@@ -28,7 +28,7 @@ requirements:
 test:
   commands:
     - which qpdf
-    - qpdf --help    # [build_platform != target_platform]
+    - qpdf --help    # [build_platform == target_platform]
 
 about:
   home: https://qpdf.sourceforge.io/
