@@ -6,7 +6,7 @@ pushd build_release
 
 cmake ${CMAKE_ARGS} \
     -GNinja \
-    -DCMAKE_BUILD_TYPE:STRING="Release" \ 
+    -DCMAKE_BUILD_TYPE:STRING="Release" \
     -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
     -DINSTALL_HEADERS:BOOL=ON \
     -DBUILD_SHARED_LIBS:BOOL=ON \
