@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -xeuo pipefail
+
 mkdir build_release
 pushd build_release
 
