@@ -8,6 +8,7 @@ pushd build_release
 cmake ${CMAKE_ARGS} \
     -GNinja \
     -DCMAKE_BUILD_TYPE:STRING="Release" \
+    -DCMAKE_PREFIX_PATH:PATH="${PREFIX}" \
     -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
     -DBUILD_SHARED_LIBS:BOOL=ON \
     -DBUILD_STATIC_LIBS:BOOL=OFF \
