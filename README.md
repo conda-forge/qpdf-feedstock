@@ -13,10 +13,7 @@ Development: https://github.com/qpdf/qpdf
 
 Documentation: https://qpdf.readthedocs.io/
 
-With QPDF, it is possible to copy objects from one PDF file into another and to manipulate the list of pages in a PDF file.
-This makes it possible to merge and split PDF files. The QPDF library also makes it possible for you to create PDF files from scratch.
-In this mode, you are responsible for supplying all the contents of the file, while the QPDF library takes care off all the syntactical representation of the objects, creation of cross references tables and, if you use them, object streams, encryption, linearization, and other syntactic details.
-
+With QPDF, it is possible to copy objects from one PDF file into another and to manipulate the list of pages in a PDF file.  This makes it possible to merge and split PDF files. The QPDF library also makes it possible for you to create PDF files from scratch.  In this mode, you are responsible for supplying all the contents of the file, while the QPDF library takes care off all the syntactical representation of the objects, creation of cross references tables and, if you use them, object streams, encryption, linearization, and other syntactic details.
 
 Current build status
 ====================
