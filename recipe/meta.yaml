@@ -26,7 +26,8 @@ requirements:
 
 test:
   commands:
-    - which qpdf
+    - which qpdf     # [unix]
+    - where qpdf     # [win]
     - qpdf --help    # [build_platform == target_platform]
 
 about:
