@@ -11,7 +11,7 @@ Summary: Command-line program that does structural, content-preserving transform
 
 Development: https://github.com/qpdf/qpdf
 
-Documentation: http://qpdf.sourceforge.net/files/qpdf-manual.html
+Documentation: https://qpdf.readthedocs.io/
 
 With QPDF, it is possible to copy objects from one PDF file into another and to manipulate the list of pages in a PDF file.
 This makes it possible to merge and split PDF files. The QPDF library also makes it possible for you to create PDF files from scratch.
