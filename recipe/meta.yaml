@@ -18,16 +18,13 @@ requirements:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - make
-    - automake
-    - autoconf
-    - coreutils  # [osx]
+    - cmake
+    - ninja
   host:
-    - zlib
     - libjpeg-turbo
-  run:
+    - openssl
     - zlib
-    - libjpeg-turbo
+
 
 test:
   commands:
