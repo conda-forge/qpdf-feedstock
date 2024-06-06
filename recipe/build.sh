@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 mkdir build_release
 pushd build_release
 
