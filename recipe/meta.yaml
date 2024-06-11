@@ -1,48 +1,53 @@
 {% set name = "qpdf" %}
-{% set version = "10.6.3" %}
+{% set version = "11.9.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/qpdf/qpdf/archive/release-qpdf-{{ version }}.tar.gz
-  sha256: 64bbb654ec19b6812284ef1bc40c57b091de5281f265f1c3c83dd8ccf6bedcf5
+  url: https://github.com/qpdf/qpdf/releases/download/v{{ version }}/qpdf-{{ version }}.tar.gz
+  sha256: 9f5d6335bb7292cc24a7194d281fc77be2bbf86873e8807b85aeccfbff66082f
 
 build:
-  number: 2
-  skip: true  # [win]
+  number: 0
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - make
-    - automake
-    - autoconf
-    - coreutils  # [osx]
+    - {{ stdlib("c") }}
+    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
+    - cmake
+    - ninja
   host:
-    - zlib
     - libjpeg-turbo
-  run:
+    - openssl
     - zlib
-    - libjpeg-turbo
 
 test:
   commands:
-    - qpdf --help
+    - which qpdf     # [unix]
+    - where qpdf     # [win]
+    - qpdf --help    # [build_platform == target_platform]
 
 about:
-  home: https://sourceforge.net/projects/qpdf/
+  home: https://qpdf.sourceforge.io/
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.txt
-  summary: Command-line program that does structural, content-preserving transformations on PDF files
+  summary: >-
+    Command-line program that does structural, content-preserving
+    transformations on PDF files
   description: |
-    With QPDF, it is possible to copy objects from one PDF file into another and to manipulate the list of pages in a PDF file.
-    This makes it possible to merge and split PDF files. The QPDF library also makes it possible for you to create PDF files from scratch.
-    In this mode, you are responsible for supplying all the contents of the file, while the QPDF library takes care off all the syntactical representation of the objects, creation of cross references tables and, if you use them, object streams, encryption, linearization, and other syntactic details.
-  doc_url: http://qpdf.sourceforge.net/files/qpdf-manual.html
+    With QPDF, it is possible to copy objects from one PDF file into another
+    and to manipulate the list of pages in a PDF file.  This makes it possible
+    to merge and split PDF files. The QPDF library also makes it possible for
+    you to create PDF files from scratch.  In this mode, you are responsible
+    for supplying all the contents of the file, while the QPDF library takes
+    care off all the syntactical representation of the objects, creation of
+    cross references tables and, if you use them, object streams, encryption,
+    linearization, and other syntactic details.
+  doc_url: https://qpdf.readthedocs.io/
   dev_url: https://github.com/qpdf/qpdf
 
 extra:

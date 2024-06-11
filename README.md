@@ -3,7 +3,7 @@ About qpdf-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/qpdf-feedstock/blob/main/LICENSE.txt)
 
-Home: https://sourceforge.net/projects/qpdf/
+Home: https://qpdf.sourceforge.io/
 
 Package license: Apache-2.0
 
@@ -11,11 +11,16 @@ Summary: Command-line program that does structural, content-preserving transform
 
 Development: https://github.com/qpdf/qpdf
 
-Documentation: http://qpdf.sourceforge.net/files/qpdf-manual.html
+Documentation: https://qpdf.readthedocs.io/
 
-With QPDF, it is possible to copy objects from one PDF file into another and to manipulate the list of pages in a PDF file.
-This makes it possible to merge and split PDF files. The QPDF library also makes it possible for you to create PDF files from scratch.
-In this mode, you are responsible for supplying all the contents of the file, while the QPDF library takes care off all the syntactical representation of the objects, creation of cross references tables and, if you use them, object streams, encryption, linearization, and other syntactic details.
+With QPDF, it is possible to copy objects from one PDF file into another
+and to manipulate the list of pages in a PDF file.  This makes it possible
+to merge and split PDF files. The QPDF library also makes it possible for
+you to create PDF files from scratch.  In this mode, you are responsible
+for supplying all the contents of the file, while the QPDF library takes
+care off all the syntactical representation of the objects, creation of
+cross references tables and, if you use them, object streams, encryption,
+linearization, and other syntactic details.
 
 
 Current build status
@@ -43,10 +48,38 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=945&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/qpdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=945&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/qpdf-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=945&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/qpdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=945&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/qpdf-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=945&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/qpdf-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -130,7 +163,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
