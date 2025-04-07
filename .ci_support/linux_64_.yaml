@@ -23,7 +23,7 @@ libjpeg_turbo:
 openssl:
 - '3'
 qpdf:
-- '11'
+- '12'
 target_platform:
 - linux-64
 zip_keys:

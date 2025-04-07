@@ -13,7 +13,7 @@ libjpeg_turbo:
 openssl:
 - '3'
 qpdf:
-- '11'
+- '12'
 target_platform:
 - win-64
 zlib:
