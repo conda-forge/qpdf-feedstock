@@ -22,7 +22,6 @@ care off all the syntactical representation of the objects, creation of
 cross references tables and, if you use them, object streams, encryption,
 linearization, and other syntactic details.
 
-
 Current build status
 ====================
 
