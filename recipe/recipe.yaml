@@ -1,41 +1,45 @@
-{% set name = "qpdf" %}
-{% set version = "12.4.2" %}
+schema_version: 1
+
+context:
+  name: qpdf
+  version: "12.4.2"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/qpdf/qpdf/releases/download/v{{ version }}/qpdf-{{ version }}.tar.gz
+  url: https://github.com/qpdf/qpdf/releases/download/v${{ version }}/qpdf-${{ version }}.tar.gz
   sha256: 8a58af5b6141319287c1883bec8bd1bd545b7567b7fc5e6ce5d25a1c85f36397
 
 build:
   number: 0
-  run_exports:
-    - {{ pin_subpackage('qpdf') }}
 
 requirements:
   build:
-    - {{ stdlib("c") }}
-    - {{ compiler("c") }}
-    - {{ compiler("cxx") }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler("c") }}
+    - ${{ compiler("cxx") }}
     - cmake
     - ninja
   host:
     - libjpeg-turbo
     - openssl
     - zlib
+  run_exports:
+    - ${{ pin_subpackage('qpdf') }}
 
-test:
-  commands:
-    - which qpdf     # [unix]
-    - where qpdf     # [win]
-    - qpdf --help    # [build_platform == target_platform]
+tests:
+  - script:
+      - if: unix
+        then: which qpdf
+      - if: win
+        then: where qpdf
+      - if: build_platform == target_platform
+        then: qpdf --help
 
 about:
-  home: https://qpdf.sourceforge.io/
   license: Apache-2.0
-  license_family: Apache
   license_file: LICENSE.txt
   summary: >-
     Command-line program that does structural, content-preserving transformations on PDF files
@@ -48,8 +52,9 @@ about:
     care off all the syntactical representation of the objects, creation of
     cross references tables and, if you use them, object streams, encryption,
     linearization, and other syntactic details.
-  doc_url: https://qpdf.readthedocs.io/
-  dev_url: https://github.com/qpdf/qpdf
+  homepage: https://qpdf.sourceforge.io/
+  repository: https://github.com/qpdf/qpdf
+  documentation: https://qpdf.readthedocs.io/
 
 extra:
   recipe-maintainers:
